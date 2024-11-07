@@ -1,0 +1,184 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f6f9;
+}
+
+.container {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Section */
+
+
+/* Main Section */
+main {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.department-info h1 {
+    font-size: 2em;
+    color: #333;
+    margin: 0;
+}
+
+.department-info p {
+    font-size: 1.1em;
+    margin: 15px 0 30px;
+    color: #555;
+}
+
+/* Semester Buttons */
+.semester-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.semester-buttons button {
+    background-color: #0072ff;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+}
+
+.semester-buttons button:hover {
+    background-color: #005bb5;
+}
+
+/* Notes Section */
+.notes h2 {
+    font-size: 1.75em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.note-item {
+    width: 100%;
+    padding: 20px;
+    background-color: #e3e8ee;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    color: #0072ff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.note-item:hover {
+    background-color: #dce4ed;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.note-item a {
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 10px;
+}
+
+.note-item button {
+    background-color: #0072ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.note-item button:hover {
+    background-color: #005bb5;
+}
+
+/* Footer Section */
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    color: white;
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+}
+
+footer h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+footer p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .header {
+        flex-direction: row;
+    }
+
+    .semester-buttons button {
+        padding: 10px 20px;
+        font-size: 1em;
+        max-width: 150px;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+@media (min-width: 1024px) {
+    .department-info h1 {
+        font-size: 36px;
+    }
+
+    .notes h2 {
+        font-size: 28px;
+    }
+
+    footer h3 {
+        font-size: 20px;
+    }
+
+    footer p {
+        font-size: 16px;
+    }
+}
+.container .top-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 400px; /* Adjust width as needed */
+    height: auto;
+ 
+}

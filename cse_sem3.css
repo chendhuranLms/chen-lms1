@@ -1,0 +1,159 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #f0f4c3, #e1f5fe); /* Soft gradient background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for page content */
+.container {
+    max-width: 1200px; /* Adjusted width for better responsiveness */
+    margin: 30px auto; /* Center the container */
+    padding: 20px;
+    background: white; /* White background for content */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Header styling */
+header h1, header h2 {
+    text-align: center;
+    margin: 0;
+    color: #1d3557; /* Dark color for text */
+}
+
+h3 {
+    text-align: center;
+    color: #1d3557;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px; /* Rounded corners for tables */
+    overflow: hidden; /* Ensures corners are rounded */
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+}
+
+th {
+    background-color: #6ec6ff; /* Light blue header */
+    color: rgb(0, 0, 0); /* White text for headers */
+}
+
+/* Section title styling */
+h2 {
+    text-align: center;
+    color: #1d3557;
+    margin-top: 20px;
+}
+
+/* Syllabus dropdown styling */
+.syllabus ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    font-size: large;
+    text-decoration: underline;
+}
+
+.syllabus li {
+    position: relative; /* Position relative for absolute pseudo-element */
+    text-align: left; /* Align text to the left for bullets */
+    padding-left: 25px;
+     /* Space for custom bullet */
+}
+
+.syllabus li::before {
+    content: '•'; /* Custom bullet character */
+    color: #1d3557; /* Color of the bullet */
+    position: absolute; /* Position absolute for custom bullet */
+    left: 0; /* Align to the left of the list item */
+    font-size: 1.5em; /* Adjust bullet size */
+    line-height: 0; /* Align bullet vertically */
+}
+
+/* Dropdown container styling */
+.dropdown {
+    display: inline-block; /* Aligns dropdown inline */
+    position: relative;
+    cursor: pointer; /* Changes cursor on hover */
+}
+
+/* Dropdown content styling */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 50; /* Aligns dropdown to the left of the parent */
+    top: 100%; /* Positions dropdown below the list item */
+    background-color: #f9f9f9; /* Light background for dropdown */
+    min-width: 160px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    border-radius: 4px; /* Rounded corners for dropdown */
+}
+
+/* Individual items in the dropdown */
+.dropdown-content a {
+    color: #333; /* Dark text color */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hover effect for dropdown links */
+.dropdown-content a:hover {
+    background-color: #e1f5fe; /* Light blue on hover */
+}
+
+/* Styling for individual links */
+a {
+    color: #0066cc; /* Standard link color */
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth transition */
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #004b87; /* Darker color on hover */
+}
+
+/* Lab manuals table styling */
+.lab-manuals table {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.lab-manuals th, .lab-manuals td {
+    padding: 12px;
+    text-align: center;
+}
+
+.lab-manuals th {
+    background-color: #6ec6ff; /* Light blue header */
+    color: white; /* White text for headers */
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Adjust padding on smaller screens */
+    }
+    header h1, header h2, h3 {
+        font-size: 1.5em; /* Responsive font size */
+    }
+}

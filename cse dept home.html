@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Computer Science Engineering</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap">
+    <link rel="stylesheet" href="cse dept home.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f6f9;
+        }
+
+        .container {
+            max-width: 1920px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Section */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 15px;
+        }
+
+
+
+
+
+        /* Main Section */
+        main {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .department-info h1 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        .department-info p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        /* Semester Buttons */
+        .semester-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        .semester-buttons a {
+            text-decoration: none;
+        }
+
+        .semester-buttons button {
+            background-color: #0072ff;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .semester-buttons button:hover {
+            background-color: #005bb5;
+        }
+
+        /* Notes Section */
+        .notes h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .notes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .note-item {
+            width: 80%;
+            padding: 10px;
+            background-color: #c8e1ec;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: #0072ff;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .note-item:focus {
+            outline: 3px solid #ffd700;
+            outline-offset: 2px;
+        }
+
+        .note-item:hover {
+            background-color: #dce4ed;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .note-item a {
+            text-decoration: none;
+            color: inherit;
+            margin-bottom: 10px;
+        }
+
+        .note-item button {
+            background-color: #0072ff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .note-item button:hover {
+            background-color: #005bb5;
+        }
+
+        /* Footer Section */
+        footer {
+            display: flex;
+            justify-content: space-between;
+            background-color: #333;
+            color: white;
+            padding: 30px;
+            margin-top: 50px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        footer h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .notes-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .semester-buttons button {
+                width: 100%;
+            }
+
+            .notes-grid {
+                grid-template-columns: 1fr;
+            }
+
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="/LMS/logo/cccccczcccxcx_1_-removebg-preview.png" alt="Top Logo" class="top-logo">
+
+
+        <!-- Main Content -->
+        <main>
+            <section class="department-info">
+                <h1>Department of Computer Science Engineering</h1>
+                <p>Select Your Semester</p>
+            </section>
+
+            <section class="semester-buttons">
+                <a href="/LMS/s&h.html".html"><button>I</button></a>
+                <a href="semester2.html"><button>II</button></a>
+                <a href="cse_sem3.html"><button>III</button></a>
+                <a href="semester4.html"><button>IV</button></a>
+                <a href="cse_sem5.html"><button>V</button></a>
+                <a href="semester6.html"><button>VI</button></a>
+                <a href="semester7.html"><button>VII</button></a>
+                <a href="semester8.html"><button>VIII</button></a>
+            </section>
+
+            <!-- Notes Section -->
+            <section class="notes">
+                <h2>Recently Uploaded Notes and Question Banks</h2>
+                <div class="notes-grid">
+                    <div class="note-item">
+                        <a href="notes/subject1_notes.pdf" download>Mathematics I</a>
+                        <button>Download</button>
+                    </div>
+                    <div class="note-item">
+                        <a href="notes/subject2_notes.pdf" download>Data Structures</a>
+                        <button>Download</button>
+                    </div>
+                    <div class="note-item">
+                        <a href="notes/subject3_notes.pdf" download>Programming</a>
+                        <button>Download</button>
+                    </div>
+                    <div class="note-item">
+                        <a href="notes/subject4_notes.pdf" download>Physics</a>
+                        <button>Download</button>
+                    </div>
+                    <div class="note-item">
+                        <a href="notes/subject5_notes.pdf" download>Communication Skills</a>
+                        <button>Download</button>
+                    </div>
+                    <div class="note-item">
+                        <a href="notes/subject6_notes.pdf" download>Operating Systems</a>
+                        <button>Download</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer Section -->
+        <footer>
+            <div class="departments">
+                <h3>Departments</h3>
+                <a href="" style="color: white;">HOME</a>
+
+                <p>Computer Science Engineering<br>Mechanical Engineering<br>Electrical and Electronics Engineering<br>Electronic and Communication Engineering<br>Civil Engineering<br>Artificial Intelligence and Data Science</p>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Chendhuran College of Engineering & Technology</p>
+                <p>Address, Pin: 123456</p>
+                <p>Tel: 91-123-456789</p>
+                <p>Email: info@crcet.edu</p>
+            </div>
+        </footer>
+        <a href="#top" style="display: inline-block; padding: 10px 20px; font-size: 16px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; position: fixed; bottom: 70px; right: 20px; cursor: pointer;">Back to Top</a>
+
+        <a href="/LMS/index.html" style="display: inline-block; padding: 10px 20px; font-size: 16px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px; position: fixed; bottom: 20px; right: 20px; cursor: pointer;">Go to Homepage</a>
+    </div>
+</body>
+</html>
