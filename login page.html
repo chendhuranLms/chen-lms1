@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS Login</title>
+     
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #846499, #00c6ff, #8697f7);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: white;
+            width: 550px;
+            height: 510px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 60px;
+            margin-left: 210px;
+        }
+
+        h1 {
+            margin: 0;
+            color: #333;
+            font-size: 24px;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 18px;
+            color: #0072ff;
+            margin-bottom: 30px;
+        }
+
+        .login-buttons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .login-button {
+            width: 45%;
+            background-color: #0072ff;
+            border: none;
+            padding: 15px;
+            color: white;
+            font-size: 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 0 10px;
+        }
+
+        .login-button:hover {
+            background-color: #005bb5;
+        }
+
+        .login-form {
+            display: none;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            max-width: 400px;
+        }
+
+        .submit-btn {
+            background-color: #00c6ff;
+            border: none;
+            padding: 8px;
+            margin-left: 170px;
+            max-width: 200px;
+            font-size: 18px;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #0072ff;
+        }
+
+        .back-btn {
+            background-color: #ccc;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            color: black;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100px;
+            margin: 10px auto 0 auto;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="logo/logo_chen-removebg-preview.png" alt="Chendhuran College Logo" class="logo">
+        
+        <div class="login-header">
+            <h1>Welcome to Chendhuran's LMS</h1>
+            <h2>Login to enter</h2>
+        </div>
+
+        <div class="login-buttons">
+            <button class="login-button" id="faculty-btn">Faculty Login</button>
+            <button class="login-button" id="student-btn">Student Login</button>
+        </div>
+
+        <div id="faculty-form" class="login-form">
+            <div class="form-group">
+                <label for="faculty-username">Faculty Username</label>
+                <input type="text" id="faculty-username" placeholder="Enter your username">
+            </div>
+            <div class="form-group">
+                <label for="faculty-password">Faculty Password</label>
+                <input type="password" id="faculty-password" placeholder="Enter your password">
+            </div>
+            <button class="submit-btn" id="faculty-login-btn">Login</button>
+            <button class="back-btn" id="faculty-back-btn">Back</button>
+        </div>
+
+        <div id="student-form" class="login-form">
+            <div class="form-group">
+                <label for="student-username">Student Username</label>
+                <input type="text" id="student-username" placeholder="Enter your username">
+            </div>
+            <div class="form-group">
+                <label for="student-password">Student Password</label>
+                <input type="password" id="student-password" placeholder="Enter your password">
+            </div>
+            <button class="submit-btn" id="student-login-btn">Login</button>
+            <button class="back-btn" id="student-back-btn">Back</button>
+        </div>
+    </div>
+
+    <script>
+        // Show faculty login form
+        document.getElementById('faculty-btn').addEventListener('click', function() {
+            document.getElementById('faculty-form').style.display = 'flex';
+            document.getElementById('student-form').style.display = 'none';
+            document.querySelector('.login-buttons').style.display = 'none';
+        });
+
+        // Show student login form
+        document.getElementById('student-btn').addEventListener('click', function() {
+            document.getElementById('student-form').style.display = 'flex';
+            document.getElementById('faculty-form').style.display = 'none';
+            document.querySelector('.login-buttons').style.display = 'none';
+        });
+
+        // Back to login selection
+        document.getElementById('faculty-back-btn').addEventListener('click', function() {
+            document.getElementById('faculty-form').style.display = 'none';
+            document.querySelector('.login-buttons').style.display = 'flex';
+        });
+
+        document.getElementById('student-back-btn').addEventListener('click', function() {
+            document.getElementById('student-form').style.display = 'none';
+            document.querySelector('.login-buttons').style.display = 'flex';
+        });
+
+        // Redirect on login click
+        document.getElementById('faculty-login-btn').addEventListener('click', function() {
+            window.location.href = 'index.html'; // Redirects to the faculty dashboard page
+        });
+
+        document.getElementById('student-login-btn').addEventListener('click', function() {
+            window.location.href = 'index.html'; // Redirects to the student dashboard page
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+section {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+table th {
+    background-color: #003366;
+    color: white;
+    text-transform: uppercase;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Style for semester images */
+table td img {
+    width: 50px;
+    height: auto;
+}
+
+/* Schedule images */
+.schedule-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 600px;
+    max-height: 800px;
+    width: 100%;
+
+}
+
+/* Footer styling */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+/* Add to your existing academic.css file */
+
+.exam-timetable {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.exam-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* 8 equal columns */
+    gap: 10px; /* Space between images */
+    justify-items: center;
+}
+
+.exam-img {
+    width: 100%;
+    height: auto;
+    max-width: 120px; /* Adjust size of each image */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.exam-timetable h2 {
+    margin-bottom: 20px;
+}
